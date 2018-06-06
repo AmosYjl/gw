@@ -1,0 +1,324 @@
+/*工具*/
+.pt0{
+	padding-top: 0px;
+}
+.pt7{
+    padding-top: 7px;
+}
+.plr0{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.ml30{
+    margin-left: 30px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.btn-orange {
+	background-color: #ed6c11;
+	color: #fff;
+}
+.font-purple{
+   color:  #40045C;
+}
+.font-blue{
+    color:  #02AFE6;
+}
+.font-orange{
+    color:  #F05E1F;
+}
+.font-green{
+    color:  #b0d5ae !important;
+}
+
+
+
+
+.btn-orange:hover,
+.btn-orange:visited,
+.btn-orange:focus {
+	color: #fff;
+}
+@media (max-width: 767px){
+	.fr-xs {
+		float: right;
+	}
+	.mb-xs10{
+		margin-bottom: 10px;
+	}
+
+}
+
+
+/*爬虫列表页*/
+.portlet > .portlet-title{
+	border-bottom: none;
+}
+.wrapper-crawler-nav-menu {
+	overflow-x: auto;
+	margin-bottom: 15px;
+}
+.crawler-nav-menu {
+	list-style: none;
+	padding: 0;
+	margin: 15px 0;
+}
+@media (max-width: 767px){
+	.crawler-nav-menu {
+		width: 924px;
+	}
+}
+.crawler-nav-menu:before,
+.crawler-nav-menu:after {
+	display: block;
+	content: " ";
+	clear: both;
+}
+.crawler-nav-menu li {
+	float: left;
+}
+.crawler-nav-menu li + li {
+	margin-left: -1px;
+}
+.crawler-nav-menu li a {
+	display: block;
+	color: #000;
+	background-color: #fff;
+	text-decoration: none;
+	text-align: center;
+	padding: 5px 30px;
+	height: 50px;
+	line-height: 40px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+.crawler-nav-menu li a .fa {
+	color: #f05e1f;
+	font-size: 20px !important;
+}
+.crawler-nav-menu li a:hover {
+	background-color: #eee;
+}
+.crawler-nav-menu li.active a {
+	border-bottom: 5px solid #ED6C11;
+}
+.crawler-nav-menu li .orange {
+	color: #ED6C11;
+}
+
+/*爬虫设计器*/
+/*头部*/
+.top .navbar-brand {
+    margin-top: 25px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.top .navbar-brand .logo-icon{
+    font-size: 40px;
+    color:  #760478;
+    display: block;
+    float: left;
+    padding-right: 15px;
+}
+.top .navbar-brand .tool-name{
+    font-size: 18px;
+    color: #101010;
+}
+.top .navbar-nav{
+    margin-top: 15px;
+    padding-top: 0px;
+    width: auto;
+}
+.top .navbar-left{
+    margin-left: 50px;
+}
+.top .navbar-nav li{
+    height: 60px;
+}
+.top .navbar-nav li a{
+    padding: 0px 15px !important;
+    font-size: 14px !important;
+    color: #101010 !important;
+}
+.top .navbar-nav li a i{
+    font-size: 23px !important;
+    color: #760478;
+}
+.top .navbar-nav li a p{
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .top .navbar-left{
+        margin-left: 5px;
+    }
+}
+@media (max-width: 767px) {
+    .top .navbar-brand .logo-icon{
+        font-size: 35px;
+    }
+    .top .navbar-nav{
+        float: left;
+    }
+    .top .navbar-nav li{
+       float: left;
+    }
+    .top .navbar-left{
+        margin-left: 0px;
+    }
+}
+
+/*主体*/
+.container-crawler-designer .wrapper-info{
+    min-height: 1200px;
+    padding-bottom: 30px;
+}
+.container-crawler-designer .wrapper-info i{
+    cursor: pointer;
+}
+.container-crawler-designer .wrapper-info .part-wrapper{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.container-crawler-designer .wrapper-info .part-wrapper h4{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.container-crawler-designer .wrapper-info .part-wrapper h4 i{
+    font-size: 18px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.container-crawler-designer .wrapper-info .control-label{
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    padding-right: 0px;
+}
+.container-crawler-designer .wrapper-info .pl{
+    padding-left: 35px;
+}
+.container-crawler-designer .wrapper-info .form-group>div{
+    padding-right: 0px;
+}
+
+.container-crawler-designer .wrapper-info .part-wrapper .address{
+    display: block;
+    width: 100%;
+    word-wrap:break-word;
+    word-break: break-all;
+}
+.container-crawler-designer .wrapper-info .part-wrapper .table{
+    margin-bottom: 0px;
+}
+.container-crawler-designer .wrapper-info .part-wrapper .table>thead>tr>th{
+    border-bottom: 0px;
+}
+.container-crawler-designer .wrapper-info .part-wrapper .table td{
+    border: 0px;
+}
+.container-crawler-designer .table>tbody>tr>td:last-child,
+.container-crawler-designer .table>thead>tr>th:last-child{
+    padding: 8px !important;
+    text-align: left!important;
+}
+
+.container-crawler-designer .wrapper-info .part-wrapper .table input,
+.container-crawler-designer .wrapper-info .part-wrapper .table select{
+    /*width: 80%;*/
+    height: 30px;
+    padding-left: 5px;
+    border: 1px solid #ddd;
+}
+.container-crawler-designer .wrapper-info .part-wrapper .table select{
+    width: 90px;
+}
+
+.container-crawler-designer .wrapper-info .part-wrapper .table i {
+    padding-right: 0px;
+}
+
+.container-crawler-designer .wrapper-info .part-wrapper .level li{
+    margin: 10px 0px;
+}
+.container-crawler-designer .wrapper-info .part-wrapper .level input {
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.title-processor .form-group{
+    margin-bottom: 10px !important;
+}
+.container-crawler-designer .wrapper-info .part-wrapper .processor{
+    margin-left: 30px;
+}
+.container-crawler-designer .wrapper-info .toggleBtn{
+    padding-left: 35px;
+}
+.container-crawler-designer .wrapper-info .imgBtn img{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
+
+/*@media (min-width: 768px) {*/
+    /*.container-crawler-designer .wrapper-info .part-wrapper .level input,*/
+    /*.container-crawler-designer .wrapper-info .part-wrapper .level select{*/
+        /*width: 736px;*/
+    /*}*/
+    /**/
+/*}*/
+
+@media (max-width: 767px) {
+    .page-content-inner .portlet{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .container-crawler-designer .wrapper-info .control-label{
+        padding-left: 0px;
+    }
+    .container-crawler-designer .wrapper-info .form-group{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .container-crawler-designer .wrapper-info .part-wrapper .table-responsive{
+       overflow-x: auto;
+        width: 100%;
+    }
+    .container-crawler-designer .wrapper-info .level .form-group .control-label{
+        padding-top: 7px;
+        width: 20%;
+    }
+    .container-crawler-designer .wrapper-info .level .form-horizontal .form-group input{
+        width: 100% !important;
+    }
+    .container-crawler-designer .wrapper-info .level .selectContent{
+        border: 1px solid #ddd;
+    }
+    .container-crawler-designer .wrapper-info .toggleBtn{
+        padding-left: 20px;
+    }
+}
+
+/*crawler-designer*/
+
+.hide{
+    display: none;
+}
+
+.Tooltip{
+    background: #000;
+    color: #fff;
+    border-radius: 4px;
+    opacity: 0.8;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+

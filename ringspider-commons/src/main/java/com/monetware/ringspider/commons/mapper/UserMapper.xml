@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.monetware.ringspider.commons.dao.UserDao" >
+    <resultMap id="userMap" type="com.monetware.ringspider.base.model.BaseUser" extends="com.monetware.ringspider.base.dao.BaseUserMapper.BaseResultMap">
+
+    </resultMap>
+
+    <!--根据账号密码获取相关用户-->
+    <select id="loadUserByUserNameAndPassword" parameterType="map" resultMap="userMap">
+       	SELECT
+		web_user.*
+	FROM
+		web_user
+	WHERE
+
+	 username = #{username}
+	AND password = #{password}
+    </select>
+	<select id="getUserByUserNameAndTel" parameterType="hashmap" resultMap="userMap">
+		SELECT
+		web_user.*
+	FROM
+		web_user
+	WHERE
+
+	 username = #{username}
+	AND tel = #{tel}
+	</select>
+	<!--获取用户列表-->
+	<select id="getUserList" resultMap="userMap" parameterType="hashmap">
+		SELECT
+		web_user.*
+	FROM
+		web_user
+	</select>
+
+</mapper>

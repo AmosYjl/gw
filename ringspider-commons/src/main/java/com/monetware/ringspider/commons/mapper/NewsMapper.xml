@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.monetware.ringspider.commons.dao.NewsDao" >
+    <resultMap id="newsMap" type="com.monetware.ringspider.base.model.BaseNews" extends="com.monetware.ringspider.base.dao.BaseNewsMapper.BaseResultMap">
+
+    </resultMap>
+
+    <!--获取新闻列表-->
+    <select id="getNewsListPage" parameterType="map" resultMap="newsMap">
+       	SELECT
+		web_news.*
+	FROM
+		web_news
+
+    </select>
+
+
+</mapper>

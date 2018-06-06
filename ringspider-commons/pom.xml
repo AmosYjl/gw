@@ -1,0 +1,292 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.monetware</groupId>
+		<artifactId>dequan-website</artifactId>
+		<version>3.0.0</version>
+	</parent>
+	<artifactId>ringspider-commons</artifactId>
+	<name>ringspider  Commons</name>
+	<description>平台公用配置、程序</description>
+
+	<!--<properties>-->
+		<!--&lt;!&ndash;本地搜索引擎地址&ndash;&gt;-->
+		<!--<es.url>http://localhost:9200</es.url>-->
+	<!--</properties>>-->
+
+	<dependencies>
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>elasticsearch-rest-client</artifactId>
+			<version>6.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-core</artifactId>
+			<version>3.2.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.monetware</groupId>
+			<artifactId>ringspider-base</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.35</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.6</version>
+		</dependency>
+		<!-- web基础包 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>1.5.7.RELEASE</version>
+		</dependency>
+		<!-- mybatis -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+
+			<version>1.5.7.RELEASE</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<!--分页插件-->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<!-- 日志 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+			<version>1.5.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.15</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.15</version>
+		</dependency>
+		<!--xspider 解析XML-->
+		<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180130</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+		<!--web magic-->
+		<!-- https://mvnrepository.com/artifact/us.codecraft/webmagic-selenium -->
+
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>webmagic-core</artifactId>
+			<version>0.7.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>us.codecraft</groupId>
+					<artifactId>xsoup</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>xsoup</artifactId>
+			<version>0.3.2-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>webmagic-extension</artifactId>
+			<version>0.7.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>webmagic-saxon</artifactId>
+			<version>0.6.1</version>
+			<exclusions>
+				<!-- webmagic中引入的saxon-he版本低与jdk8冲突，使用最新版本的saxon-he -->
+				<exclusion>
+					<groupId>net.sf.saxon</groupId>
+					<artifactId>Saxon-HE</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>1.4.01</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+        <dependency>
+            <groupId>org.ansj</groupId>
+            <artifactId>ansj_seg</artifactId>
+            <version>5.1.1</version>
+        </dependency>
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+		<!--文本摘要分析-->
+		<!-- https://mvnrepository.com/artifact/org.ansj/ansj_seg -->
+		<!--<dependency>
+			<groupId>org.ansj</groupId>
+			<artifactId>ansj_seg</artifactId>
+			<version>0.9</version>
+		</dependency>-->
+		<!-- https://mvnrepository.com/artifact/org.nlpcn/nlp-lang -->
+		<dependency>
+			<groupId>org.nlpcn</groupId>
+			<artifactId>nlp-lang</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+		<!--拼音相关依赖-->
+		<!-- https://mvnrepository.com/artifact/com.belerweb/pinyin4j -->
+		<dependency>
+			<groupId>com.belerweb</groupId>
+			<artifactId>pinyin4j</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+
+		<!-- carrot2 -->
+		<!-- https://mvnrepository.com/artifact/org.carrot2/carrot2-core -->
+		<dependency>
+			<groupId>org.carrot2</groupId>
+			<artifactId>carrot2-core</artifactId>
+			<version>3.15.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.carrot2.shaded/carrot2-guava -->
+		<dependency>
+			<groupId>org.carrot2.shaded</groupId>
+			<artifactId>carrot2-guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+		<!-- thuctc文本分类算法 -->
+		<!-- https://mvnrepository.com/artifact/de.bwaldvogel/liblinear -->
+		<dependency>
+			<groupId>de.bwaldvogel</groupId>
+			<artifactId>liblinear</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/tw.edu.ntu.csie/libsvm -->
+		<dependency>
+			<groupId>tw.edu.ntu.csie</groupId>
+			<artifactId>libsvm</artifactId>
+			<version>3.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<!-- 打包时忽略resources下的文件，同时将java目录下的xml文件打包 -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>**/*</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.properties</include>
+				</includes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</testResource>
+			<testResource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>log4j2.xml</include>
+				</includes>
+			</testResource>
+		</testResources>
+	</build>
+</project>

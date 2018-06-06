@@ -1,0 +1,207 @@
+/*--------------------------------------------------
+    [TRANSITION]
+----------------------------------------------------*/
+/* Cubic Bezier Transition */
+/***
+Login page
+***/
+/* logo page */
+.pt8{
+    padding-top: 8px;
+}
+.btn-orange{
+    background-color: #ed6c11;
+    color: #fff;
+}
+.btn-orange:hover{
+    color: #fff;
+}
+.form-register{
+    margin-top: 150px;
+}
+.btn-register{
+    margin-top: 18px;
+    margin-right: 15px;
+    background: #760478;
+    color: #fff !important;
+    padding: 6px 13px;
+    border-color: #760478;
+}
+.btn-register:hover,
+.btn-register:visited,
+.btn-register:focus{
+    background: #760478;
+    border-color: #760478;
+    color: #fff;
+}
+
+#sendMessage[disabled="disabled"]{
+    background: transparent;
+    border: 0px;
+}
+
+/*导航条*/
+body .page-header{
+    height: auto;
+}
+.page-header .page-header-top{
+    border-bottom: 1px solid #ddd !important;
+}
+@media (min-width: 1200px){
+    .login-header {
+        width: 90%;
+    }
+}
+.page-header .page-header-top .page-logo .logo-default{
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+.page-header .page-header-top .page-brand{
+    display: block;
+    float: left;
+    line-height: 75px;
+    font-size: 20px;
+}
+@media (max-width:767px) {
+    .page-header .page-header-top .page-brand{
+        display: block;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+    }
+    .page-header .page-header-top .top-menu .navbar-nav{
+        margin-top: -60px;
+        margin-right: -8px;
+    }
+    .btn-register{
+        float: right;
+        margin-bottom: 10px;
+    }
+}
+
+.wrapper{
+    width: 100%;
+    position: relative;
+}
+.wrapper>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.wrapper .box{
+    width: 85%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper .box{
+    width: 90%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 10%;
+  }
+}
+.wrapper .login-left h3{
+    font-size: 30px;
+    color: #fff;
+    margin-bottom:15px;
+}
+.wrapper .login-left p{
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.container-form{
+    min-height: 320px;
+    background:#fff;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 0px;
+}
+@media only screen and (min-width:1200px) {
+  .wrapper .container-form{
+    width: 360px;
+  }
+}
+.container-form>p{
+    width: 100%;
+    height: 15px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    background: #760478;
+}
+.container-form .form-group b{
+    display: inline-block;
+    width: 80px;height: 33px;
+    border-bottom: 2px solid #760478;
+}
+.container-form .form-group button{
+    padding:6px 12px;
+    background: none;
+    color:red;
+    border: none;
+    outline:none;
+}
+.container-form .form-horizontal{
+  padding: 0px 20px;
+}
+.container-form .form-horizontal .form-group{
+  margin:0px 0px 20px;
+}
+.container-form .form-horizontal .form-group .form-control{
+  border-radius: 4px !important;
+}
+.container-form .form-horizontal{
+  margin-bottom: 20px;
+}
+.container-form .form-horizontal input[type=submit]{
+    background: #760478;
+    color: #fff;
+}
+@media (max-width: 767px){
+    .container-fluid>.navbar-header{
+      margin: 0px;
+    }
+    .container-form{
+      margin:0px auto;
+      border:1px solid #ccc;
+    }
+    .wrapper{
+      min-height:320px;
+    }
+    .wrapper .box{
+      height:auto;
+      top:50px;
+      padding:0px 20px;
+    }
+    .wrapper .box{
+      width: 100%;
+    }
+}
+
+footer{
+    background: #fff;
+    width: 100%;
+    margin-bottom: 30px;
+}
+footer .container-footer>p{
+    margin-top:15px;
+    margin-bottom:0px !important;
+}
+footer .about-link{
+  margin-top: 10px;
+}
+footer .about-link li{
+  list-style: none;
+  display: inline-block;
+}
+footer .about-link li a{
+  text-decoration: none;
+  color: #8B0478;
+}
+

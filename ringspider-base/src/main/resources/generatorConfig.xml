@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+	<classPathEntry location="src/main/resources/mysql-connector-java-5.1.41.jar" />
+
+	<context id="context">
+		<jdbcConnection connectionURL="jdbc:mysql://101.132.126.116:3306/dequan-website?characterEncoding=utf-8&amp;allowMultiQueries=true&amp;useSSL=false" driverClass="com.mysql.jdbc.Driver" userId="root" password="amos123" />
+		<javaModelGenerator targetPackage="com.monetware.ringspider.base.model" targetProject="src/main/java" />
+		<sqlMapGenerator targetPackage="com.monetware.ringspider.base.mapper" targetProject="src/main/java" />
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.monetware.ringspider.base.dao" targetProject="src/main/java" />
+
+		<table tableName="web_news" domainObjectName="BaseNews" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+
+		<table tableName="web_product" domainObjectName="BaseProduct" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="web_product_cat" domainObjectName="BaseProductCat" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+
+		<table tableName="web_message" domainObjectName="BaseMessage" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="web_user" domainObjectName="BaseUser" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="web_setting" domainObjectName="BaseSetting" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+		<table tableName="web_info_log" domainObjectName="BaseInfoLog" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
+
+
+
+
+
+
+
+	</context>
+</generatorConfiguration>
