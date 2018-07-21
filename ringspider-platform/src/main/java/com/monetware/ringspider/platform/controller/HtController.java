@@ -4,7 +4,9 @@ import com.monetware.ringspider.base.model.*;
 import com.monetware.ringspider.commons.service.inter.*;
 import com.monetware.ringspider.commons.util.JsonResult;
 import com.monetware.ringspider.commons.util.SessionUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.UUID;
 
 @Controller
@@ -35,6 +38,8 @@ public class HtController {
     private InfoLogService infoLogService;
     @Autowired
     private FileService fileService;
+    @Value("${uploaded.dir}")
+    private String uploadedDir;
 
     @RequestMapping(value = "uploadFile",method = RequestMethod.POST)
     @ResponseBody
@@ -42,13 +47,13 @@ public class HtController {
         if(file!=null&&!file.isEmpty()){
             //获取文件名
             String[] suffix = file.getOriginalFilename().split("[.]");
-            String fileName = UUID.randomUUID() + suffix[1];
+            String fileName = UUID.randomUUID()+"." + suffix[1];
             //复制上传的文件到服务器目录下面
             boolean uploadImageFlag = fileService.saveSingleFile(file,"",fileName);
             if (!uploadImageFlag){
                 return new JsonResult(false,"上传失败");
             }else{
-                return new JsonResult(true,fileName);
+                return new JsonResult(true,"uploaded/"+fileName);
             }
 
         }else{
@@ -146,6 +151,8 @@ public class HtController {
      */
     @RequestMapping("product/detail")
     public String productDetail(int id,Model model){
+        List<BaseProductCat> productCatList = productCatService.getProductCatList();
+        model.addAttribute("cats",productCatList);
         if(id!=0){
             BaseProduct product = productService.getProductById(id);
             model.addAttribute("product",product);
@@ -158,7 +165,18 @@ public class HtController {
 
     @RequestMapping(value = "saveProduct",method = RequestMethod.POST)
     @ResponseBody
-    public  JsonResult saveProduct(BaseProduct product){
+    public  JsonResult saveProduct(BaseProduct product,MultipartFile file){
+        if(file!=null&&!file.isEmpty()){
+            //获取文件名
+            String[] suffix = file.getOriginalFilename().split("[.]");
+            String fileName = UUID.randomUUID() + suffix[1];
+            //复制上传的文件到服务器目录下面
+            boolean uploadImageFlag = fileService.saveSingleFile(file,"",fileName);
+            if (!uploadImageFlag){
+                return new JsonResult(false,"上传失败");
+            }
+            product.setProductMainPic(fileName);
+        }
         return productService.saveProduct(product);
     }
 
@@ -234,13 +252,41 @@ public class HtController {
      */
     @RequestMapping(value = "saveSetting",method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult saveSetting(BaseSetting setting){
+    public JsonResult saveSetting(BaseSetting setting,MultipartFile file){
+        if(StringUtils.isBlank(setting.getSettingValue())&& (file.isEmpty()||file == null)) {
+        return new JsonResult(false,"请上传图片");
+        }
+        if(file!=null&&!file.isEmpty()){
+            //获取文件名
+            String[] suffix = file.getOriginalFilename().split("[.]");
+            String fileName = UUID.randomUUID() + "." + suffix[1];
+            //复制上传的文件到服务器目录下面
+            boolean uploadImageFlag = fileService.saveSingleFile(file,"",fileName);
+            if (!uploadImageFlag){
+                return new JsonResult(false,"上传失败");
+            }else{
+               setting.setSettingValue(fileName);
+            }
+
+        }
+
+
         return settingService.saveSetting(setting);
     }
 
+    /**
+     * 新闻相关
+     * @return
+     */
     @RequestMapping("news/list")
     public String newsList(){
         return "ht/news_list";
+    }
+
+    @RequestMapping(value = "getNewsListPage",method = RequestMethod.POST)
+    @ResponseBody
+    public JsonResult getNewsListPage(int page,int showCount,String keyWord){
+        return newsService.getNewsListPage(page,showCount);
     }
     @RequestMapping("news/detail")
     public String newsDetail(int id,Model model){
@@ -257,6 +303,32 @@ public class HtController {
     @ResponseBody
     public JsonResult saveNews(BaseNews news){
         return newsService.saveNews(news);
+    }
+
+    /**
+     * 留言相关
+     */
+    @RequestMapping("message/list")
+    public String messageList(){
+        return "ht/message_list";
+    }
+
+    @RequestMapping(value = "getMessageListPage",method = RequestMethod.POST)
+    @ResponseBody
+    public JsonResult getMessageListPage(int page,int showCount,String keyWord){
+
+        return newsService.getNewsListPage(page,showCount);
+    }
+    @RequestMapping("message/detail")
+    public String messageDetail(int id,Model model){
+        if(id!=0){
+            BaseMessage message = messageService.getMessageById(id);
+            model.addAttribute("message",message);
+        }else{
+            BaseMessage message = new BaseMessage();
+            model.addAttribute("message",message);
+        }
+        return "ht/message_detail";
     }
 
 

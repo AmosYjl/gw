@@ -38,7 +38,7 @@
                     <div class="col-xs-12">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title">设置列表</h3>
+                                <h3 class="panel-title">留言列表</h3>
                             </div>
                             <!--Data Table-->
                             <!--===================================================-->
@@ -46,7 +46,7 @@
                                 <div class="pad-btm form-inline">
                                     <div class="row">
                                         <div class="col-sm-6 table-toolbar-left">
-                                            <button class="btn btn-purple addUser"><i class="demo-pli-add icon-fw"></i>新增</button>
+
 
 
                                         </div>
@@ -63,25 +63,14 @@
                                         <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>类型</th>
-                                            <th>名称</th>
-                                            <th>描述</th>
+                                            <th>用户</th>
+                                            <th>邮箱</th>
+                                            <th>电话</th>
                                             <th>详情</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
                                         <tbody id="tbody">
-                                        <tr>
-                                            <td><a href="#" class="btn-link"> Order #53431</a></td>
-                                            <td>Steve N. Horton</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Oct 22, 2014</span></td>
-                                            <td>$45.00</td>
-                                            <td class="text-center">
-                                                <div class="label label-table label-success">Paid</div>
-                                            </td>
-                                            <td class="text-center">-</td>
-                                        </tr>
-
                                         </tbody>
                                     </table>
                                 </div>
@@ -146,17 +135,15 @@
     $(function () {
         Page(1,10);
     });
-    $(".addUser").click(function () {
-        window.location.href="${ctx}/admin/setting/detail?id=0";
-    });
-    $("body").on("click",".userEdit",function () {
+
+    $("body").on("click",".messageEdit",function () {
         var id = $(this).attr("data-id");
-        window.location.href="${ctx}/admin/setting/detail?id="+id;
+        window.location.href="${ctx}/admin/message/detail?id="+id;
     });
-    $("body").on("click",".userDelete",function () {
+    $("body").on("click",".messageDelete",function () {
         var id = $(this).attr("data-id");
         $.ajax({
-            url:'${ctx}/admin/settingDelete',
+            url:'${ctx}/admin/messageDelete',
             data:{
                 "id":id
             },
@@ -174,7 +161,7 @@
     function Page(page,showCount) {
         var keyWord = $("#keyWord").val();
         $.ajax({
-            url:'${ctx}/admin/getSettingListPage',
+            url:'${ctx}/admin/getMessageListPage',
             data:{
                 "page":page,
                 "showCount":showCount,
@@ -188,44 +175,18 @@
                     $(result.data.list).each(function(i,item){
                         var pageStr="<tr>";
                         pageStr=pageStr+"<td >"+ifNull(item.id,"")+"</td>";
-                        if(item.settingType == "1"){
-                            pageStr=pageStr+"<td >轮播图</td>";
-                        }
-                        if(item.settingType == "2"){
-                            pageStr=pageStr+"<td >首页广告位一</td>";
-                        }
-                        if(item.settingType == "3"){
-                            pageStr=pageStr+"<td >LOGO</td>";
-                        }
-                        if(item.settingType == "4"){
-                            pageStr=pageStr+"<td >首页广告位二</td>";
-                        }
-                        if(item.settingType == "5"){
-                            pageStr=pageStr+"<td >首页广告位三</td>";
-                        }
-                        if(item.settingType == "6"){
-                            pageStr=pageStr+"<td >首页广告位四</td>";
-                        }
-                        if(item.settingType == "7"){
-                            pageStr=pageStr+"<td >首页广告位五</td>";
-                        }
-                        if(item.settingType == "8"){
-                            pageStr=pageStr+"<td >首页广告位六</td>";
-                        }
-                        if(item.settingType == "9"){
-                            pageStr=pageStr+"<td >首页广告位七</td>";
-                        }
-                        pageStr=pageStr+"<td >"+ifNull(item.settingTitle,"")+"</td>";
-                        pageStr=pageStr+"<td >"+ifNull(item.settingDesc,"")+"</td>";
-                        pageStr=pageStr+"<td ><img style='width:80px;height:80px;' src='${ctx}/uploaded/"+ifNull(item.settingValue,"")+"'/></td>";
+                        pageStr=pageStr+"<td >"+ifNull(item.username,"")+"</td>";
+                        pageStr=pageStr+"<td >"+ifNull(item.email,"")+"</td>";
+                        pageStr=pageStr+"<td >"+ifNull(item.phone,"")+"</td>";
+                        pageStr=pageStr+"<td >"+ifNull(item.content,"")+"</td>";
                         pageStr=pageStr+"<td>" +
                             "<div class='btn-group dropdown'>" +
                             "<button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>" +
                             "操作 <span class='caret'></span>" +
                             "</button> "+
                             "<ul class='dropdown-menu'>" +
-                            "<li><a data-id='"+item.id+"'  class='userEdit editDispatch' href='#'>编辑</a></li>" +
-//                            "<li class='survey-end-hide'><a data-id='"+item.id+"' class='userDelete ' href='#'>删除</a></li>" +
+                            "<li><a data-id='"+item.id+"'  class='messageEdit editDispatch' href='#'>编辑</a></li>" +
+                            "<li class='survey-end-hide'><a data-id='"+item.id+"' class='messageDelete ' href='#'>删除</a></li>" +
                             "</ul>"+
                             "</div>"+
                             "</td>";

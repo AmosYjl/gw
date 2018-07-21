@@ -35,8 +35,8 @@
 				</root>
 			]]>
 		</log4j.logger>
-		<log4j.log.file>C:/ringspider/logs/${project.artifactId}.log</log4j.log.file>
-		<log4j.log.errorFile>C:/ringspider/logs/${project.artifactId}_error.log</log4j.log.errorFile>
+		<log4j.log.file>C:/dequan/logs/${project.artifactId}.log</log4j.log.file>
+		<log4j.log.errorFile>C:/dequan/logs/${project.artifactId}_error.log</log4j.log.errorFile>
 
 		<db.driver>com.mysql.jdbc.Driver</db.driver>
 		<db.url>jdbc:mysql://101.132.126.116:3306/dequan-website?characterEncoding=utf-8&amp;allowMultiQueries=true&amp;useSSL=false</db.url>
@@ -44,7 +44,7 @@
 		<db.password>amos123</db.password>
 
 		<!-- 上传的物理地址，上传图片或音频时保存的位置 -->
-		<uploaded.dir>C:/ringspider/uploaded</uploaded.dir>
+		<uploaded.dir>/Users/yangjiaolong/Documents/resource</uploaded.dir>
 	</properties>
 
 	<!-- 第三方包的版本管理 -->

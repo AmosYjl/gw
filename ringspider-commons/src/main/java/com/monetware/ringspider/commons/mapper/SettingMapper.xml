@@ -11,6 +11,13 @@
 		web_setting.*
 	FROM
 		web_setting
+		WHERE  1 = 1
+		<if test=" type!=null and  type!='' and type!='0'">
+			AND setting_type = #{type}
+		</if>
+		<if test="type!=null and  type!='' and type!='0'">
+			limit 1
+		</if>
 
     </select>
 

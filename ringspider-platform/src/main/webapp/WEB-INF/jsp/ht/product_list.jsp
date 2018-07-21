@@ -46,7 +46,7 @@
                                 <div class="pad-btm form-inline">
                                     <div class="row">
                                         <div class="col-sm-6 table-toolbar-left">
-                                            <button class="btn btn-purple addUser"><i class="demo-pli-add icon-fw"></i>新增</button>
+                                            <button class="btn btn-purple addProduct"><i class="demo-pli-add icon-fw"></i>新增</button>
 
 
                                         </div>
@@ -70,17 +70,6 @@
                                         </tr>
                                         </thead>
                                         <tbody id="tbody">
-                                        <tr>
-                                            <td><a href="#" class="btn-link"> Order #53431</a></td>
-                                            <td>Steve N. Horton</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Oct 22, 2014</span></td>
-                                            <td>$45.00</td>
-                                            <td class="text-center">
-                                                <div class="label label-table label-success">Paid</div>
-                                            </td>
-                                            <td class="text-center">-</td>
-                                        </tr>
-
                                         </tbody>
                                     </table>
                                 </div>
@@ -145,17 +134,17 @@
     $(function () {
         Page(1,10);
     });
-    $(".addUser").click(function () {
-        window.location.href="${ctx}/admin/user/detail?id=0";
+    $(".addProduct").click(function () {
+        window.location.href="${ctx}/admin/product/detail?id=0";
     });
-    $("body").on("click",".userEdit",function () {
+    $("body").on("click",".productEdit",function () {
         var id = $(this).attr("data-id");
-        window.location.href="${ctx}/admin/user/detail?id="+id;
+        window.location.href="${ctx}/admin/product/detail?id="+id;
     });
-    $("body").on("click",".userDelete",function () {
+    $("body").on("click",".productDelete",function () {
         var id = $(this).attr("data-id");
         $.ajax({
-            url:'${ctx}/admin/userDelete',
+            url:'${ctx}/admin/productDelete',
             data:{
                 "id":id
             },
@@ -197,8 +186,8 @@
                             "操作 <span class='caret'></span>" +
                             "</button> "+
                             "<ul class='dropdown-menu'>" +
-                            "<li><a data-id='"+item.id+"'  class='userEdit editDispatch' href='#'>编辑</a></li>" +
-                            "<li class='survey-end-hide'><a data-id='"+item.id+"' class='userDelete ' href='#'>删除</a></li>" +
+                            "<li><a data-id='"+item.id+"'  class='productEdit editDispatch' href='#'>编辑</a></li>" +
+                            "<li class='survey-end-hide'><a data-id='"+item.id+"' class='productDelete ' href='#'>删除</a></li>" +
                             "</ul>"+
                             "</div>"+
                             "</td>";

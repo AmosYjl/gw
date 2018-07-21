@@ -36,14 +36,14 @@
             <div id="page-content">
                 <div class="row">
                     <div class="col-xs-12">
-                        <form id="userForm"  class="form-horizontal" action="${ctx}/admin/saveSetting" method="post" enctype="multipart/form-data">
+                        <form id="userForm"  class="form-horizontal" action="${ctx}/admin/saveProduct" method="post">
                             <div id="demo-accordion" class="panel-group accordion">
                                 <div class="panel">
 
                                     <!-- Accordion title -->
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-1">设置详情</a>
+                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-1">商品详情</a>
                                         </h4>
                                     </div>
 
@@ -51,53 +51,48 @@
                                     <div  >
                                         <div class="panel-body">
                                             <div class="form-group">
-                                                <label class="col-lg-3 control-label">类型</label>
+                                                <label class="col-lg-3 control-label">名称</label>
                                                 <div class="col-lg-7">
-                                                    <input type="hidden" name="id" value="${setting.id}">
-                                                    <select id="settingType" class="form-control" name="settingType">
-                                                        <option value="1">轮播图</option>
-                                                        <option value="3">LOGO</option>
-                                                        <option value="2">首页广告位一</option>
-                                                        <option value="4">首页广告位二</option>
-                                                        <option value="5">首页广告位三</option>
-                                                        <option value="6">首页广告位四</option>
-                                                        <option value="7">首页广告位五</option>
-                                                        <option value="8">首页广告位六</option>
-                                                        <option value="9">首页广告位七</option>
-                                                    </select>
+                                                    <input type="hidden" name="id" value="${product.id}">
+                                                    <input type="text" class="form-control" name="productName" placeholder="请输入商品详情" value="${product.productName}" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">详情</label>
+                                                <div id="newsContent" style="width: 100px;"  class="col-lg-7">
+                                                        <h4></h4>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">简介</label>
+                                                <div class="col-lg-7">
+
+                                                    <input type="text" class="form-control" name="productIntr" placeholder="请输入商品简介" value="${product.productIntr}" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">主图</label>
+                                                <div class="col-lg-7">
+                                                    <input type="file" class="form-control" name="file" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">分类</label>
+                                                <div class="col-lg-7">
+                                                   <select class="form-control" name="productCat">
+                                                       <c:forEach items="${cats}" var="cat">
+                                                           <c:if test="${cat.id == product.productCat}">
+                                                               <option value="${cat.id}" selected>${cat.catName}</option>
+                                                           </c:if>
+                                                           <c:if test="${cat.id != product.productCat}">
+                                                               <option value="${cat.id}">${cat.catName}</option>
+                                                           </c:if>
+                                                       </c:forEach>
+                                                   </select>
 
                                                 </div>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label class="col-lg-3 control-label">背景图</label>
-                                                <div class="col-lg-7">
-                                                    <input type="hidden" name="settingValue" value="${setting.settingValue}">
-                                                    <input type="file" class="form-control" name="file" placeholder="请输入选择图片" >
-                                                </div>
-                                            </div>
-                                            <c:if test="${setting.settingValue!=null and setting.settingValue!=''}">
-                                                <div class="form-group">
-                                                    <label class="col-lg-3 control-label">背景图</label>
-                                                    <div class="col-lg-7">
-                                                        <img style="width: 80px;height: 80px;" src="${ctx}/uploaded/${setting.settingValue}">
-                                                    </div>
-                                                </div>
-                                            </c:if>
-
-                                            <div class="form-group">
-                                                <label class="col-lg-3 control-label">标题</label>
-                                                <div class="col-lg-7">
-                                                    <input type="text" class="form-control" name="settingTitle" placeholder="请输入设置标题" value="${setting.settingTitle}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-lg-3 control-label">内容</label>
-                                                <div class="col-lg-7">
-                                                    <textarea type="text" class="form-control" id="settingDesc" name="settingDesc" placeholder="请输入设置详情" value="${setting.settingDesc}">
-                                                    </textarea>
-                                                </div>
-                                            </div>
 
                                             <div class="form-group">
                                                 <div class="col-lg-7 col-lg-offset-3">
@@ -139,16 +134,39 @@
 </div>
 <script>
     $(function () {
-        autoSelect("settingType","${setting.settingType}");
+        $('#newsContent').summernote({
+            callbacks: {
+                onImageUpload: function(files, editor, $editable) {
+                    sendFile(files,editor,$editable);
+                }
+            }
+        });
+        function sendFile(files, editor, $editable) {
+            var data = new FormData();
+            data.append("file", files[0]);
+            $.ajax({
+                data : data,
+                type : "POST",
+                url : "${ctx}/admin/uploadFile", //图片上传出来的url，返回的是图片上传后的路径，http格式
+                cache : false,
+                contentType : false,
+                processData : false,
+                dataType : "json",
+                success: function(data) {//data是返回的hash,key之类的值，key是定义的文件名
+                    $('#summernote').summernote('insertImage', data.data);
+                },
+                error:function(){
+                    alert("上传失败");
+                }
+            });
+        }
         $("#userForm").ajaxForm({
             beforeSubmit:function () {
 
             },
             success:function (result) {
                 if(result.success){
-                    window.location.href="/admin/setting/list";
-                }else{
-                    alert(result.msg);
+                    window.location.href="/admin/product/list";
                 }
             }
 

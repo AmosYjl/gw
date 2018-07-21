@@ -11,23 +11,20 @@
 
 <div class="zong">
 	<div class="main1">
-		<a href="http://www.wellpower4.com/about-us/">ABOUT POWER4</a>
-		<p><a href="http://www.wellpower4.com/about-us/">Power4 Industries Limited, established in 2005, is one of the
-			leading mobile accessories and cable manufacturers with over 10 years experiences in designing,
-			manufacturing and distributing Apple’s accessories and other consuming electronics, such as EL light glowing
-			headphones, EL light glowing cables, MFI cables, Type-C cable, and LED car chargers.</a></p>
+		<a href="http://www.wellpower4.com/about-us/">${first.settingTitle}</a>
+		<p><a href="http://www.wellpower4.com/about-us/">${first.settingDesc}</a></p>
 	</div>
 </div>
 <div class="main2">
 	<div class="main2n">
 		<div class="zong1">
 			<div class="m2n">
-				<a href="http://www.wellpower4.com/usb-c-cable/" class="m2biao" title="USB-C Cable">USB-C Cable</a>
-				<p><a href="http://www.wellpower4.com/usb-c-cable/"
-					  title="Established in 2005, is one of the leading mobile accessories and cable manufacturers with over 10 years experiences in designing.">Established
-					in 2005, is one of the leading mobile accessories and cable manufacturers with over 10 years
-					experiences in designing.</a></p>
-				<a href="http://www.wellpower4.com/usb-c-cable/" class="m2mor">View More</a>
+				<a href="${ctx}/products/" class="m2biao" title="${second.settingTitle}">${second.settingTitle}</a>
+				<p><a href="${ctx}/products/"
+					  title="${second.settingTitle}">
+					${second.settingDesc}
+					</a></p>
+				<a href="${ctx}/products/" class="m2mor">View More</a>
 			</div>
 		</div>
 	</div>
@@ -35,19 +32,16 @@
 <div class="main3">
 	<div class="zong1">
 		<div class="m3n">
-			<a href="http://www.wellpower4.com/mfi-cable/" class="m3biao" title="MFI Cable">MFI Cable</a>
-			<a href="http://www.wellpower4.com/mfi-cable/" class="m2tu" title=""><img
-					src="http://www.wellpower4.com/img/m2tu.png" title="" alt=""></a>
+			<a href="http://www.wellpower4.com/mfi-cable/" class="m3biao" title="MFI Cable">${three.settingTitle}</a>
+
 			<p><a href="http://www.wellpower4.com/mfi-cable/"
-				  title="Established in 2005, is one of the leading mobile accessories and cable manufacturers with over 10 years experiences in designing.">Established
-				in 2005, is one of the leading mobile accessories and cable manufacturers with over 10 years experiences
-				in designing.</a></p>
+				  title="${three.settingTitle}">${three.settingDesc}</a></p>
 			<a href="http://www.wellpower4.com/mfi-cable/" class="m3mor">View More</a>
 		</div>
 	</div>
 </div>
 <div class="main4">
-	<a href="http://www.wellpower4.com/about-us/" class="m4biao">WHY CHOOSE US</a>
+	<a href="http://www.wellpower4.com/about-us/" class="m4biao">${four.settingTitle}</a>
 	<div class="m4n">
 		<div class="m4lie m4lie1">
 			<a title="Rich Experience (Founded in 2005)" class="m4tu"><img

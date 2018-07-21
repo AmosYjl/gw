@@ -5,7 +5,6 @@
 <!-- 根路径 -->
 
 <!--Open Sans Font [ OPTIONAL ]-->
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 <!--Bootstrap Stylesheet [ REQUIRED ]-->
 <link  href="${ctx}/resources/css/bootstrap.css" rel="stylesheet">
 <!--Nifty Stylesheet [ REQUIRED ]-->

@@ -18,4 +18,6 @@ public interface SettingDao extends BaseSettingMapper{
      * @return
      */
     BaseSetting getSettingByName(HashMap map);
+
+
 }

@@ -36,14 +36,14 @@
             <div id="page-content">
                 <div class="row">
                     <div class="col-xs-12">
-                        <form id="userForm"  class="form-horizontal" action="${ctx}/admin/saveProductCat" method="post">
+                        <form id="userForm"  class="form-horizontal" action="${ctx}/admin/saveNews" method="post">
                             <div id="demo-accordion" class="panel-group accordion">
                                 <div class="panel">
 
                                     <!-- Accordion title -->
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-1">商品分类详情</a>
+                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-1">新闻详情</a>
                                         </h4>
                                     </div>
 
@@ -53,36 +53,32 @@
                                             <div class="form-group">
                                                 <label class="col-lg-3 control-label">标题</label>
                                                 <div class="col-lg-7">
-                                                    <input type="hidden" name="id" value="${productCat.id}">
-                                                    <input type="text" class="form-control" name="catName" placeholder="请输入分类详情" value="${productCat.catName}" required>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-lg-3 control-label"></label>
-                                                <div id="newsContent" style="width: 100px;"  class="col-lg-7">
+                                                    <input type="hidden" name="id" value="${news.id}">
 
-                                                        <h4><span style="color: rgb(206, 198, 206); font-family: inherit; line-height: 1.1;">Please, write text here!</span><br></h4><h4><font color="#9c9c94"></font></h4>
+                                                    <input type="text" class="form-control" name="newsName" placeholder="请输入新闻标题" value="${news.newsName}" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-3 control-label">内容</label>
+                                                <div   class="col-lg-7">
+                                                    <textarea type="text"  name="newsContent" id="newsContent">
+                                                        ${news.newsContent}
+                                                    </textarea>
 
                                                 </div>
                                             </div>
+
                                             <div class="form-group">
-                                                <label class="col-lg-3 control-label">标题</label>
+                                                <label class="col-lg-3 control-label">作者</label>
                                                 <div class="col-lg-7">
-                                                    <input type="hidden" name="id" value="${productCat.id}">
-                                                    <input type="text" class="form-control" name="catName" placeholder="请输入分类详情" value="${productCat.catName}" required>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-lg-3 control-label">标题</label>
-                                                <div class="col-lg-7">
-                                                    <input type="hidden" name="id" value="${productCat.id}">
-                                                    <input type="text" class="form-control" name="catName" placeholder="请输入分类详情" value="${productCat.catName}" required>
+
+                                                    <input type="text" class="form-control" name="author" placeholder="请输入作者" value="${news.author}" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-3 control-label">顺序</label>
                                                 <div class="col-lg-7">
-                                                    <input type="number" class="form-control" name="orderBy" id="password" placeholder="请输入分类顺序" value="${productCat.orderBy}" required>
+                                                    <input type="number" class="form-control" name="orderBy"  placeholder="请输入顺序" value="${news.orderBy}" required>
                                                 </div>
                                             </div>
 
@@ -135,7 +131,7 @@
         });
         function sendFile(files, editor, $editable) {
             var data = new FormData();
-            data.append("ajaxTaskFile", files[0]);
+            data.append("file", files[0]);
             $.ajax({
                 data : data,
                 type : "POST",
@@ -145,7 +141,7 @@
                 processData : false,
                 dataType : "json",
                 success: function(data) {//data是返回的hash,key之类的值，key是定义的文件名
-                    $('#summernote').summernote('insertImage', data.data);
+                    $('#newsContent').summernote('insertImage',"${ctx}/"+data.msg);
                 },
                 error:function(){
                     alert("上传失败");
@@ -153,12 +149,15 @@
             });
         }
         $("#userForm").ajaxForm({
+            beforeSerialize:function () {
+
+            },
             beforeSubmit:function () {
 
             },
             success:function (result) {
                 if(result.success){
-                    window.location.href="/admin/product_cat/list";
+                    window.location.href="/admin/news/list";
                 }
             }
 

@@ -53,4 +53,101 @@ public class SettingServiceImpl implements SettingService {
         paramMap.put("name",name);
         return settingDao.getSettingByName(paramMap);
     }
+
+    @Override
+    public BaseSetting getLogoSetting() {
+        HashMap paramMap = new HashMap();
+        paramMap.put("type",3);
+        List<BaseSetting> settings = settingDao.getSettingList(paramMap);
+        if(settings.size()>0){
+            return settings.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public List<BaseSetting> getPictureSettings() {
+        HashMap paramMap = new HashMap();
+        paramMap.put("type",1);
+        return settingDao.getSettingList(paramMap);
+    }
+
+    @Override
+    public BaseSetting getFirstArticleSettings() {
+        HashMap paramMap = new HashMap();
+        paramMap.put("type",2);
+        List<BaseSetting> settings = settingDao.getSettingList(paramMap);
+        if(settings.size()>0){
+            return settings.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public BaseSetting getSecondArticleSettings() {
+        HashMap paramMap = new HashMap();
+        paramMap.put("type",4);
+        List<BaseSetting> settings = settingDao.getSettingList(paramMap);
+        if(settings.size()>0){
+            return settings.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public BaseSetting getThreeArticleSettings() {
+        HashMap paramMap = new HashMap();
+        paramMap.put("type",5);
+        List<BaseSetting> settings = settingDao.getSettingList(paramMap);
+        if(settings.size()>0){
+            return settings.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public BaseSetting getFourArticleSettings() {
+        HashMap paramMap = new HashMap();
+        paramMap.put("type",6);
+        List<BaseSetting> settings = settingDao.getSettingList(paramMap);
+        if(settings.size()>0){
+            return settings.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public BaseSetting getFiveArticleSettings() {
+        HashMap paramMap = new HashMap();
+        paramMap.put("type",7);
+        List<BaseSetting> settings = settingDao.getSettingList(paramMap);
+        if(settings.size()>0){
+            return settings.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public BaseSetting getSixArticleSettings() {
+        HashMap paramMap = new HashMap();
+        paramMap.put("type",8);
+        List<BaseSetting> settings = settingDao.getSettingList(paramMap);
+        if(settings.size()>0){
+            return settings.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public BaseSetting getSevenArticleSettings() {
+        HashMap paramMap = new HashMap();
+        paramMap.put("type",9);
+        List<BaseSetting> settings = settingDao.getSettingList(paramMap);
+        if(settings.size()>0){
+            return settings.get(0);
+        }
+        return null;
+    }
+
+
 }

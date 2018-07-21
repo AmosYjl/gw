@@ -7,6 +7,7 @@ import com.monetware.ringspider.base.model.BaseSetting;
 import com.monetware.ringspider.commons.util.JsonResult;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * @author  huqiang
@@ -35,6 +36,60 @@ public interface SettingService {
   BaseSetting getSettingById(int id);
 
   BaseSetting getSettingByName(String name);
+
+  /**
+   * 获取LOGO
+   * @return
+   */
+  BaseSetting getLogoSetting();
+
+  /**
+   * 获取轮播图列表
+   * @return
+   */
+  List<BaseSetting> getPictureSettings();
+
+  /**
+   * 获取广告1
+   * @return
+   */
+  BaseSetting getFirstArticleSettings();
+
+  /**
+   * 获取广告位2
+   * @return
+   */
+  BaseSetting getSecondArticleSettings();
+
+  /**
+   * 获取广告位3
+   * @return
+   */
+  BaseSetting getThreeArticleSettings();
+
+  /**
+   * 获取广告位4
+   * @return
+   */
+  BaseSetting getFourArticleSettings();
+
+  /**
+   * 获取广告位5
+   * @return
+   */
+  BaseSetting getFiveArticleSettings();
+
+  /**
+   * 获取广告位6
+   * @return
+   */
+  BaseSetting getSixArticleSettings();
+
+  /**
+   * 获取广告位7
+   * @return
+   */
+  BaseSetting getSevenArticleSettings();
 
 
 

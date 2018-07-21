@@ -52,4 +52,12 @@ public class ProductCatServiceImpl implements ProductCatService {
         PageInfo pageInfo = new PageInfo(productCatList);
         return new JsonResult(true,pageInfo);
     }
+
+    @Override
+    public List<BaseProductCat> getProductCatList() {
+        HashMap paramMap = new HashMap();
+
+        List<BaseProductCat> productCatList = productCatDao.getProductCatList(paramMap);
+        return productCatList;
+    }
 }
