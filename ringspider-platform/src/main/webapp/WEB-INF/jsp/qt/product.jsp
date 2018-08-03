@@ -12,7 +12,7 @@
 
 
 <div class="mianbao zong">
-    <a href="http://www.wellpower4.com/">Home</a> / <a href="http://www.wellpower4.com/products/" class="co5e">Products</a></div>
+    <a href="${ctx}/">Home</a> / <a href="${ctx}/product/" class="co5e">Products</a></div>
 <div class="prmain zong">
     <div class="prnav">
         <div class="img-scroll">
@@ -44,182 +44,24 @@
             </div>
         </div>
     </div><form action="http://www.wellpower4.com/inquiry_list.php" method="post" enctype="multipart/form-data">
-    <div class="chanlie maln">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/bluetooth-earphone-headphone/bluetooth sports headphones earphones .html" title="Wireless Sports Headphones Bluetooth V4.1 EDR Stereo Headset Earphones With Mic  Hands Free Calling" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0403/20180403035300541.jpg" alt="Wireless Sports Headphones Bluetooth V4.1 EDR Stereo Headset Earphones With Mic  Hands Free Calling" title="Wireless Sports Headphones Bluetooth V4.1 EDR Stereo Headset Earphones With Mic  Hands Free Calling"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/bluetooth-earphone-headphone/bluetooth sports headphones earphones .html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="924">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/bluetooth-earphone-headphone/bluetooth sports headphones earphones .html" title="Wireless Sports Headphones Bluetooth V4.1 EDR Stereo Headset Earphones With Mic  Hands Free Calling">Wireless Sports Headphones Bluetoo...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=924" class="chanmor">Inquire Now</a>
-    </div>
+
+
+    <c:forEach items="${result.data}" var="o">
     <div class="chanlie ">
         <div class="chantu">
-            <a href="http://www.wellpower4.com/bluetooth-earphone-headphone/bluetooth earphone.html" title="Bluetooth Headphones In-ear Earbuds Wireless Headset V4.1 EDR Sports Earphones for iPhone/Samsung and more devices" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0329/20180329030505698.jpg" alt="Bluetooth Headphones In-ear Earbuds Wireless Headset V4.1 EDR Sports Earphones for iPhone/Samsung and more devices" title="Bluetooth Headphones In-ear Earbuds Wireless Headset V4.1 EDR Sports Earphones for iPhone/Samsung and more devices"></a>
+            <a href="#" title="3 in 1 Type -C /Lightning /Micro USB Charging Cable -Sync/Charge for Apple and Android" class="chantun"><img src="${ctx}/uploaded/${o.productMainPic}" alt="3 in 1 Type -C /Lightning /Micro USB Charging Cable -Sync/Charge for Apple and Android" title="3 in 1 Type -C /Lightning /Micro USB Charging Cable -Sync/Charge for Apple and Android"></a>
             <div class="chanfu">
-                <a href="http://www.wellpower4.com/bluetooth-earphone-headphone/bluetooth earphone.html">Read</a>
+                <a href="${ctx}/getProductById">Read</a>
             </div>
-            <input type="checkbox" name="id[]" value="921">
+            <input type="checkbox" name="id[]" value="${o.id}">
         </div>
-        <a class="chanzi" href="http://www.wellpower4.com/bluetooth-earphone-headphone/bluetooth earphone.html" title="Bluetooth Headphones In-ear Earbuds Wireless Headset V4.1 EDR Sports Earphones for iPhone/Samsung and more devices">Bluetooth Headphones In-ear Earbud...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=921" class="chanmor">Inquire Now</a>
+        <a class="chanzi" href="http://www.wellpower4.com/3-in-1-usb-charging-cable/902.html" title="3 in 1 Type -C /Lightning /Micro USB Charging Cable -Sync/Charge for Apple and Android">${o.productName}</a>
+        <%--点击跳转到立即咨询按钮--%>
+        <a href="${ctx}/concat_us" class="chanmor">Inquire Now</a>
     </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/mfi-cable/ 2 in 1 Lightning and Micro USB Charging Cable.html" title=" 2 in 1 Lightning and Micro USB Charging Cable" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0324/20180324110735191.jpg" alt=" 2 in 1 Lightning and Micro USB Charging Cable" title=" 2 in 1 Lightning and Micro USB Charging Cable"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/mfi-cable/ 2 in 1 Lightning and Micro USB Charging Cable.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="918">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/mfi-cable/ 2 in 1 Lightning and Micro USB Charging Cable.html" title=" 2 in 1 Lightning and Micro USB Charging Cable"> 2 in 1 Lightning and Micro USB Ch...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=918" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/3-in-1-usb-charging-cable/904.html" title="3 in 1 Type -C /Lightning /Micro USB Phone Charger Charging Cable for Apple iPone and Android device" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0205/20180205051419219.jpg" alt="3 in 1 Type -C /Lightning /Micro USB Phone Charger Charging Cable for Apple iPone and Android device" title="3 in 1 Type -C /Lightning /Micro USB Phone Charger Charging Cable for Apple iPone and Android device"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/3-in-1-usb-charging-cable/904.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="904">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/3-in-1-usb-charging-cable/904.html" title="3 in 1 Type -C /Lightning /Micro USB Phone Charger Charging Cable for Apple iPone and Android device">3 in 1 Type -C /Lightning /Micro U...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=904" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie maln">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/3-in-1-usb-charging-cable/903.html" title="3 in 1 Type -C /Lightning /Micro USB Phone Charger Charging Cable for Apple iPone and Android device" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0205/20180205051419219.jpg" alt="3 in 1 Type -C /Lightning /Micro USB Phone Charger Charging Cable for Apple iPone and Android device" title="3 in 1 Type -C /Lightning /Micro USB Phone Charger Charging Cable for Apple iPone and Android device"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/3-in-1-usb-charging-cable/903.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="903">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/3-in-1-usb-charging-cable/903.html" title="3 in 1 Type -C /Lightning /Micro USB Phone Charger Charging Cable for Apple iPone and Android device">3 in 1 Type -C /Lightning /Micro U...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=903" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/3-in-1-usb-charging-cable/902.html" title="3 in 1 Type -C /Lightning /Micro USB Charging Cable -Sync/Charge for Apple and Android" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0205/20180205025346885.jpg" alt="3 in 1 Type -C /Lightning /Micro USB Charging Cable -Sync/Charge for Apple and Android" title="3 in 1 Type -C /Lightning /Micro USB Charging Cable -Sync/Charge for Apple and Android"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/3-in-1-usb-charging-cable/902.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="902">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/3-in-1-usb-charging-cable/902.html" title="3 in 1 Type -C /Lightning /Micro USB Charging Cable -Sync/Charge for Apple and Android">3 in 1 Type -C /Lightning /Micro U...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=902" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/wireless-charger/fast-charging-wireless-charger .html" title="Fast charging Qi certified wireless charger charging pad stand 5W 7.5W 10W for Samsung Galaxy S8/S7/S6 Edge Plus/Note 5 and Qi-Enabled Device" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0205/20180205111002794.jpg" alt="Fast charging Qi certified wireless charger charging pad stand 5W 7.5W 10W for Samsung Galaxy S8/S7/S6 Edge Plus/Note 5 and Qi-Enabled Device" title="Fast charging Qi certified wireless charger charging pad stand 5W 7.5W 10W for Samsung Galaxy S8/S7/S6 Edge Plus/Note 5 and Qi-Enabled Device"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/wireless-charger/fast-charging-wireless-charger .html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="900">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/wireless-charger/fast-charging-wireless-charger .html" title="Fast charging Qi certified wireless charger charging pad stand 5W 7.5W 10W for Samsung Galaxy S8/S7/S6 Edge Plus/Note 5 and Qi-Enabled Device">Fast charging Qi certified wireles...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=900" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/wireless-charger/wireless-charger-charging-pad-stand.html" title="Mobile phone charger Qi certified wireless charger pad 5W 7.5W 10W for Samsung Galaxy S8/S7/S6 Edge Plus/Note 5 and Qi-Enabled Device" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0201/20180201115447890.jpg" alt="Mobile phone charger Qi certified wireless charger pad 5W 7.5W 10W for Samsung Galaxy S8/S7/S6 Edge Plus/Note 5 and Qi-Enabled Device" title="Mobile phone charger Qi certified wireless charger pad 5W 7.5W 10W for Samsung Galaxy S8/S7/S6 Edge Plus/Note 5 and Qi-Enabled Device"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/wireless-charger/wireless-charger-charging-pad-stand.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="898">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/wireless-charger/wireless-charger-charging-pad-stand.html" title="Mobile phone charger Qi certified wireless charger pad 5W 7.5W 10W for Samsung Galaxy S8/S7/S6 Edge Plus/Note 5 and Qi-Enabled Device">Mobile phone charger Qi certified ...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=898" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie maln">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/wireless-charger/fast-charger-wireless-charger-charging-pad.html" title="Qi fast charger wireless charging pad 10W for iPhone X/8/8plus and all Qi-Enabled Devices" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0323/20180323100914755.jpg" alt="Qi fast charger wireless charging pad 10W for iPhone X/8/8plus and all Qi-Enabled Devices" title="Qi fast charger wireless charging pad 10W for iPhone X/8/8plus and all Qi-Enabled Devices"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/wireless-charger/fast-charger-wireless-charger-charging-pad.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="897">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/wireless-charger/fast-charger-wireless-charger-charging-pad.html" title="Qi fast charger wireless charging pad 10W for iPhone X/8/8plus and all Qi-Enabled Devices">Qi fast charger wireless charging ...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=897" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/wireless-charger/wirelss-charger.html" title="Qi certified wireless charging stand 5W 7.5W 10W for iPhone X/8/8plus" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0131/20180131032239535.jpg" alt="Qi certified wireless charging stand 5W 7.5W 10W for iPhone X/8/8plus" title="Qi certified wireless charging stand 5W 7.5W 10W for iPhone X/8/8plus"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/wireless-charger/wirelss-charger.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="894">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/wireless-charger/wirelss-charger.html" title="Qi certified wireless charging stand 5W 7.5W 10W for iPhone X/8/8plus">Qi certified wireless charging sta...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=894" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/wireless-charger/wireless-charger-charging-pad .html" title="Wireless charger charging pad 10W for iPhone X/8/8 plus" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2018/0122/20180122061318277.jpg" alt="Wireless charger charging pad 10W for iPhone X/8/8 plus" title="Wireless charger charging pad 10W for iPhone X/8/8 plus"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/wireless-charger/wireless-charger-charging-pad .html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="893">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/wireless-charger/wireless-charger-charging-pad .html" title="Wireless charger charging pad 10W for iPhone X/8/8 plus">Wireless charger charging pad 10W ...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=893" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/charger/dual-usb-car-charger-wp012.html" title="Dual USB Car Charger with Spring Cable WP012M" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2017/0321/20170321113851404.jpg" alt="Dual USB Car Charger with Spring Cable WP012M" title="Dual USB Car Charger with Spring Cable WP012M"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/charger/dual-usb-car-charger-wp012.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="744">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/charger/dual-usb-car-charger-wp012.html" title="Dual USB Car Charger with Spring Cable WP012M">Dual USB Car Charger with Spring C...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=744" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie maln">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/charger/dual-usb-car-charger-wp001.html" title="Dual USB Car Charger with El Light Spring Cable WP011" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2017/0321/20170321113722400.jpg" alt="Dual USB Car Charger with El Light Spring Cable WP011" title="Dual USB Car Charger with El Light Spring Cable WP011"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/charger/dual-usb-car-charger-wp001.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="743">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/charger/dual-usb-car-charger-wp001.html" title="Dual USB Car Charger with El Light Spring Cable WP011">Dual USB Car Charger with El Light...</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=743" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/charger/car-charger-wp010.html" title="Car Charger WP010" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2017/0321/20170321113656348.jpg" alt="Car Charger WP010" title="Car Charger WP010"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/charger/car-charger-wp010.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="742">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/charger/car-charger-wp010.html" title="Car Charger WP010">Car Charger WP010</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=742" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/charger/car-charger-wp009.html" title="Car Charger WP009" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2017/0321/20170321113621670.jpg" alt="Car Charger WP009" title="Car Charger WP009"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/charger/car-charger-wp009.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="741">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/charger/car-charger-wp009.html" title="Car Charger WP009">Car Charger WP009</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=741" class="chanmor">Inquire Now</a>
-    </div>
-    <div class="chanlie ">
-        <div class="chantu">
-            <a href="http://www.wellpower4.com/charger/car-charger-wp008f.html" title="Car Charger WP008F" class="chantun"><img src="http://www.wellpower4.com/uploadfile/2017/0321/20170321113552206.jpg" alt="Car Charger WP008F" title="Car Charger WP008F"></a>
-            <div class="chanfu">
-                <a href="http://www.wellpower4.com/charger/car-charger-wp008f.html">Read</a>
-            </div>
-            <input type="checkbox" name="id[]" value="740">
-        </div>
-        <a class="chanzi" href="http://www.wellpower4.com/charger/car-charger-wp008f.html" title="Car Charger WP008F">Car Charger WP008F</a>
-        <a href="http://www.wellpower4.com/guestbook/index.php?id=740" class="chanmor">Inquire Now</a>
-    </div>
+    </c:forEach>
+
+
 
     <div class="clear"></div>
     <div class="fenye">

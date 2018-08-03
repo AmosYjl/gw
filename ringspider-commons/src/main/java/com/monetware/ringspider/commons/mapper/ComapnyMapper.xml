@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.monetware.ringspider.commons.dao.CompanyDao" >
+    <!--extends="com.monetware.ringspider.base.dao.BaseCompanyMapper.BaseResultMap"-->
+    <resultMap id="newsMap" type="com.monetware.ringspider.base.model.BaseCompany" >
+
+    </resultMap>
+
+    <!--获取留言消息列表-->
+    <select id="getMessageById"  parameterType="java.lang.Integer" resultMap="newsMap">
+        SELECT  *
+        FROM
+        web_company
+        where id=#{1}
+    </select>
+
+</mapper>

@@ -38,11 +38,11 @@
             <li><a href="${ctx}/product" <c:if test="${menuFlag == 'product'}">class="dangqiandao"</c:if>>Products</a>
                 <ul class="yiji">
                     <c:forEach items="${cats}" var="cat">
-                        <li><a href="${ctx}/${cat.catName}/">${cat.catName}</a></li>
+                        <li><a href="${ctx}/getProductsByCat?catName=${cat.catName}">${cat.catName}</a></li>
                     </c:forEach>
                 </ul>
             </li>
-            <li><a href="${ctx}/about_us" <c:if test="${menuFlag == 'about_us'}">class="dangqiandao"</c:if>>About Us</a></li>
+            <li><a href="${ctx}/about_us">About Us</a></li>
             <li><a href="${ctx}/news" <c:if test="${menuFlag == 'news'}">class="dangqiandao"</c:if>>News</a></li>
             <li><a href="${ctx}/support" <c:if test="${menuFlag == 'support'}">class="dangqiandao"</c:if>>SUPPORT</a></li>
             <li><a href="${ctx}/concat_us" <c:if test="${menuFlag == 'concat_us'}">class="dangqiandao"</c:if>">Contact Us</a></li>

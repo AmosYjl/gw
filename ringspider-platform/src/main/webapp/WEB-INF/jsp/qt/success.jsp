@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=utf-8" %>
 <!doctype html>
 <html>
 <head>
@@ -113,17 +114,10 @@
         <li class="codingwei">${company.address}</li>
         <div class="clear"></div>
     </ul>
-    <form class="coxin"  name="myform" method="post" action="${ctx}/submmit_message" onsubmit="return pan(this);" enctype="multipart/form-data">
-        <a class="cobiao">send us MeSSAGE</a>
-        <input type="text" class="int1 curen" placeholder="Name" name="username" id="username" />
-        <input type="text" class="int1 cuxinfeng" placeholder="E-mail" name="email" id="email" />
-        <input type="text" class="int1 cudianhua" placeholder="Tel" name="phone" id="tel" />
-        <%--<input type="text" class="int1 cufang" placeholder="Country" name="country" id="country" />--%>
-        <textarea placeholder="Your Message" name="content" id="content"></textarea>
+     <p>
+         留言已提交！感谢您的宝贵意见，我们会尽快回复！
 
-        <div class="clear"></div>
-        <input type="submit" class="int3" value="Submit" name="dosubmit"/>
-    </form>
+     </p>
     <iframe src="http://www.google.cn/maps/embed?pb=!1m18!1m12!1m3!1d3679.304722719299!2d113.85981231545894!3d22.75406998508972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340396c6cd21e417%3A0xa14c9a054b96a9a7!2z5bm_5Lic55yB5rex5Zyz5biC5a6d5a6J5Yy65Lic5pa56LevIOmCruaUv-e8lueggTogNTE4MTA1!5e0!3m2!1szh-CN!2scn!4v1490079348732" height="536" frameborder="0" style="border:0" allowfullscreen class="ditu" ></iframe>
 </div>
 <div class="foot">

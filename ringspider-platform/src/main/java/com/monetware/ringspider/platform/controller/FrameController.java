@@ -1,15 +1,13 @@
 package com.monetware.ringspider.platform.controller;
 
-import com.monetware.ringspider.base.model.BaseProductCat;
-import com.monetware.ringspider.base.model.BaseSetting;
-import com.monetware.ringspider.commons.service.inter.ProductCatService;
-import com.monetware.ringspider.commons.service.inter.SettingService;
-import com.monetware.ringspider.commons.service.inter.UserService;
+import com.monetware.ringspider.base.model.*;
+import com.monetware.ringspider.commons.service.inter.*;
 import com.monetware.ringspider.commons.util.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -34,8 +32,14 @@ public class FrameController {
 	private ProductCatService productCatService;
 	@Autowired
 	private SettingService settingService;
-
-
+    @Autowired
+	private ProductService productService;
+    @Autowired
+	NewsService newsService;
+    @Autowired
+	MessageService messageService;
+    @Autowired
+	CompanyService companyService;
 	/**
 	 * 系统入口-
 	 * @param session
@@ -63,12 +67,16 @@ public class FrameController {
 		model.addAttribute("five",five);
 		model.addAttribute("six",six);
 		model.addAttribute("seven",seven);
+
 		//获取session
 		return "home";
 	}
-	@RequestMapping("/product")
-	public String product(HttpSession session,Model model) {
-		//获取session
+	@RequestMapping("/getProductsByCat")
+	public String product(HttpSession session,String catName,Model model) {
+
+		//调用service
+		JsonResult result=productService.getProductListByCat(catName);
+		model.addAttribute("result",result);
 		return "qt/product";
 	}
 	@RequestMapping("/about_us")
@@ -78,12 +86,27 @@ public class FrameController {
 	}
 	@RequestMapping("/concat_us")
 	public String concatUs(HttpSession session,Model model) {
-		//获取session
+		//从数据库中获取到公司的基本信息
+		BaseCompany company=companyService.getMessageById(1);
+		//将数据压栈
+		model.addAttribute("company",company);
 		return "qt/concat_us";
+	}
+	//concat_us 页面提交留言
+	@RequestMapping("/submmit_message")
+	public String submmit(BaseMessage message,Model model){
+		//将接收到的对象存入数据库中，message表
+	   JsonResult result=	messageService.saveMessage(message);
+
+		//返回true时页面跳出弹框显示提交成功
+		return "qt/success";
 	}
 	@RequestMapping("/news")
 	public String news(HttpSession session,Model model) {
 		//获取session
+
+		List<BaseNews> list=newsService.getNewsList();
+		model.addAttribute("list",list);
 		return "qt/news";
 	}
 	//support

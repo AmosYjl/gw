@@ -33,10 +33,9 @@
 		<table tableName="web_info_log" domainObjectName="BaseInfoLog" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" >
 			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
 		</table>
-
-
-
-
+		<table tableName="web_company" domainObjectName="BaseCompany" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" >
+			<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+		</table>
 
 
 
