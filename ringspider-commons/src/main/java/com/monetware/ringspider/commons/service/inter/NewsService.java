@@ -5,6 +5,7 @@ import com.monetware.ringspider.base.model.BaseUser;
 import com.monetware.ringspider.commons.util.JsonResult;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 
 public interface NewsService {
@@ -15,4 +16,5 @@ public interface NewsService {
 
   JsonResult getNewsListPage(int page,int showCount);
 
+    List<BaseNews> getNewsList();
 }

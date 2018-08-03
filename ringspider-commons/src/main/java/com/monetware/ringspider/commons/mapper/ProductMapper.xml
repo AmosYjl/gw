@@ -7,6 +7,19 @@
 		<select id="getProductList" parameterType="hashmap" resultMap="productMap">
 			SELECT *
 			from web_product
+			where product_cat=#{catName}
 		</select>
+
+	<select id="getProductListPage" parameterType="hashmap" resultMap="productMap">
+		SELECT *
+		from web_product
+
+	</select>
+	<select id="getProductListByCat" parameterType="String" resultMap="productMap">
+		SELECT *
+		from web_product
+		where product_cat=#{catName}
+	</select>
+
 
 </mapper>

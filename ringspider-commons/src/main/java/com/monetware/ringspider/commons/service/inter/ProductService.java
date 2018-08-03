@@ -22,6 +22,5 @@ public interface ProductService {
   JsonResult getProductListPage(int page,int showCount,String keyWord);
 
 
-
-
+  JsonResult getProductListByCat(String catName);
 }

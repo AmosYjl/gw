@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ringspider-base" />
+        <module name="ringspider-commons" />
+        <module name="ringspider-platform" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dequan-website" target="1.8" />
+      <module name="ringspider-base" target="1.8" />
+      <module name="ringspider-commons" target="1.8" />
+      <module name="ringspider-platform" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

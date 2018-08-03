@@ -13,6 +13,12 @@
 		web_news
 
     </select>
+    <select id="getNewsList"  resultMap="newsMap">
+        SELECT
+        web_news.*
+        FROM
+        web_news
 
+    </select>
 
 </mapper>

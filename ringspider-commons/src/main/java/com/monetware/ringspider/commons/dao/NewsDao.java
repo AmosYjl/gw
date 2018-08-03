@@ -10,4 +10,6 @@ import java.util.List;
 public interface NewsDao extends BaseNewsMapper {
 
     List<BaseNews> getNewsListPage(HashMap map);
+
+    List<BaseNews> getNewsList();
 }

@@ -47,4 +47,9 @@ public class NewsServiceImpl implements NewsService {
         PageInfo pageInfo = new PageInfo(newsList);
         return new JsonResult(true,pageInfo);
     }
+
+    @Override
+    public List<BaseNews> getNewsList() {
+        return newsDao.getNewsList();
+    }
 }

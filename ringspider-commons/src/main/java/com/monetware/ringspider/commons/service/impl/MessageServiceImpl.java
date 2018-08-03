@@ -25,7 +25,7 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public JsonResult saveMessage(BaseMessage message) {
         if(message.getId() == null || message.getId() == 0){
-            messageDao.insertSelective(message);
+            messageDao.save(message);
         }else {
             messageDao.updateByPrimaryKeySelective(message);
         }

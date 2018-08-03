@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dequan-website.iml" filepath="$PROJECT_DIR$/dequan-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ringspider-base/ringspider-base.iml" filepath="$PROJECT_DIR$/ringspider-base/ringspider-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ringspider-commons/ringspider-commons.iml" filepath="$PROJECT_DIR$/ringspider-commons/ringspider-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ringspider-platform/ringspider-platform.iml" filepath="$PROJECT_DIR$/ringspider-platform/ringspider-platform.iml" />
+    </modules>
+  </component>
+</project>

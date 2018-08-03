@@ -11,4 +11,6 @@ import java.util.List;
 public interface MessageDao extends BaseMessageMapper {
 
     List<BaseMessage> getMessageList(HashMap map);
+
+    void save(BaseMessage message);
 }
